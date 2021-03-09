@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>peris assign</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header> 
+		<li class="kwetu">parlz coorp</li>
+	    <div class="nav">
+			<nav>
+				<ul class="navlinks">
+					<li class="active"><a href="index.html">Home</a></li>
+					<li><a href=".html">contact </a></li>
+                    <li><a href="login.html">log in</a></li>
+                    <li><a href="cart.html">cart</a></li>
+					<li><a href="discover.html">discover</a></li>
+					
+				</ul>
+			</nav>
+			<div class="burger" onclick="toogleMobileMenu();">
+				<div class="line1"></div>
+				<div class="line2"></div>
+				<div class="line3"></div>
+			</div>
+   </div>
+</header>
+
+
+
+<footer>
+	copyright@periswanjiku 2019
+</footer>
+
+    <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+
+            <script>
+     const navslide = () => {
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.navlinks');
+    const navLinks = document.querySelectorAll('.navlinks li');
+
+    burger.addEventListener('click', ()=>{
+        nav.classList.toggle('nav-active');
+        navLinks.forEach((link, index) => {
+            if (link.style.animation) {
+                link.style.animation = '';
+            }else{
+                link.style.animation = 'navLinkFade 0.2s ease forward ${index / 7 + 0.1}s';
+            }
+        });
+
+        burger.classList.toggle('toggle');
+    });
+}   
+
+navslide();
+
+        </script>
+</body>
+</html>
